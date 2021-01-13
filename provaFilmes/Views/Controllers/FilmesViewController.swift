@@ -22,29 +22,7 @@ class FilmesViewController: UIViewController, UICollectionViewDataSource, UIColl
         navigationController?.navigationBar.barStyle = .black
     }
     
-    let client: MovieServiceProtocol
     
-    init(client: MovieServiceProtocol = MovieService()) {
-        self.client = client
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func loadMovie() {
-        client.getFilmes { (filmesArray, erro) in
-            if let error = erro {
-                AlertaSemInternet().alertaSemInternet(self, "Atenção", error)
-            }else if let filmes = filmesArray{
-                self.filmes = filmes
-                self.colecaoFilmes.reloadData()
-            }
-        }
-    }
-    
-
     
     var filmes: [Filmes] = []
     
@@ -52,7 +30,8 @@ class FilmesViewController: UIViewController, UICollectionViewDataSource, UIColl
         super.viewDidLoad()
         colecaoFilmes.dataSource = self
         colecaoFilmes.delegate = self
-        loadMovie()
+        
+//        loadMovie()
 //        getFilme()
         
         
@@ -60,6 +39,20 @@ class FilmesViewController: UIViewController, UICollectionViewDataSource, UIColl
 
         // Do any additional setup after loading the view.
     }
+    
+    let viewModel: MainViewModel
+    
+    init(viewModel: MainViewModel = MainViewModel()) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+   
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return filmes.count
@@ -80,7 +73,7 @@ class FilmesViewController: UIViewController, UICollectionViewDataSource, UIColl
         controller.filmeSelecionado = detalhesFilme
         navigationController?.pushViewController(controller, animated: true)
 //        self.present(controller, animated: true, completion: nil)
-    } 
+    }
     
 //    func getFilme() {
 //        FilmesAPI().getFilmes { (filmesArray, erro) in

@@ -14,6 +14,8 @@ protocol MovieServiceProtocol {
 }
 
 class MovieService: MovieServiceProtocol {
+    
+    
     func getFilmes(completion: @escaping ([Filmes]?, String?) -> Void) {
         let url = "https://api.themoviedb.org/3/trending/all/week?api_key=79b0976a6ec7bd4d968a3ef2d867985d&language=pt-BR"
         
