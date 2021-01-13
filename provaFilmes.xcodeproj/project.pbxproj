@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74F0CEE8E0608605F4CA5638 /* Pods_provaFilmes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B8C02C69D7BB6AAA26CDBF /* Pods_provaFilmes.framework */; };
 		D3141B2125A742900047B34D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3141B2025A742900047B34D /* AppDelegate.swift */; };
-		D3141B2325A742900047B34D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3141B2225A742900047B34D /* ViewController.swift */; };
 		D3141B2625A742900047B34D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3141B2425A742900047B34D /* Main.storyboard */; };
 		D3141B2825A742910047B34D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3141B2725A742910047B34D /* Assets.xcassets */; };
 		D3141B2B25A742910047B34D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3141B2925A742910047B34D /* LaunchScreen.storyboard */; };
@@ -20,6 +18,9 @@
 		D3141B4725A888F70047B34D /* DetalhesFilmeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3141B4625A888F70047B34D /* DetalhesFilmeViewController.swift */; };
 		D353A3A125AC114200B52320 /* estrela.png in Resources */ = {isa = PBXBuildFile; fileRef = D353A3A025AC114200B52320 /* estrela.png */; };
 		D353A3A925AC865C00B52320 /* AlertaSemInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D353A3A825AC865C00B52320 /* AlertaSemInternet.swift */; };
+		D3561F5C25AE0C49001A1C4C /* Pods_provaFilmes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B8C02C69D7BB6AAA26CDBF /* Pods_provaFilmes.framework */; };
+		D3BC2E1F25AE26420096BE97 /* estrela120.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BC2E1E25AE26420096BE97 /* estrela120.png */; };
+		D3BC2E2225AE27470096BE97 /* pipoca120.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BC2E2125AE27470096BE97 /* pipoca120.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +29,6 @@
 		B5B8C02C69D7BB6AAA26CDBF /* Pods_provaFilmes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_provaFilmes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3141B1D25A742900047B34D /* provaFilmes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = provaFilmes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3141B2025A742900047B34D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D3141B2225A742900047B34D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D3141B2525A742900047B34D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3141B2725A742910047B34D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3141B2A25A742910047B34D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +40,8 @@
 		D3141B4625A888F70047B34D /* DetalhesFilmeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesFilmeViewController.swift; sourceTree = "<group>"; };
 		D353A3A025AC114200B52320 /* estrela.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estrela.png; sourceTree = "<group>"; };
 		D353A3A825AC865C00B52320 /* AlertaSemInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertaSemInternet.swift; sourceTree = "<group>"; };
+		D3BC2E1E25AE26420096BE97 /* estrela120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estrela120.png; sourceTree = "<group>"; };
+		D3BC2E2125AE27470096BE97 /* pipoca120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipoca120.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74F0CEE8E0608605F4CA5638 /* Pods_provaFilmes.framework in Frameworks */,
+				D3561F5C25AE0C49001A1C4C /* Pods_provaFilmes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +78,6 @@
 			children = (
 				D3141B1F25A742900047B34D /* provaFilmes */,
 				D3141B1E25A742900047B34D /* Products */,
-				D353A39F25AC114200B52320 /* Assets */,
 				983470584D6C54F41767BEB7 /* Pods */,
 				2924E5E7FF7DA6A259A77A09 /* Frameworks */,
 			);
@@ -93,16 +94,13 @@
 		D3141B1F25A742900047B34D /* provaFilmes */ = {
 			isa = PBXGroup;
 			children = (
+				D3BC2E2625AE4A230096BE97 /* ViewControllers */,
+				D3BC2E2425AE49550096BE97 /* Resources */,
+				D3561F6825AE13D1001A1C4C /* Aplication */,
 				D353A3A625AC862500B52320 /* AlertaSemInternet */,
 				D3141B4325A888B80047B34D /* DetalhesFilme */,
 				D3141B3825A774E90047B34D /* Filmes */,
 				D3141B3225A744CD0047B34D /* Model */,
-				D3141B2025A742900047B34D /* AppDelegate.swift */,
-				D3141B2225A742900047B34D /* ViewController.swift */,
-				D3141B2425A742900047B34D /* Main.storyboard */,
-				D3141B2725A742910047B34D /* Assets.xcassets */,
-				D3141B2925A742910047B34D /* LaunchScreen.storyboard */,
-				D3141B2C25A742910047B34D /* Info.plist */,
 			);
 			path = provaFilmes;
 			sourceTree = "<group>";
@@ -169,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				D353A3A025AC114200B52320 /* estrela.png */,
+				D3BC2E1E25AE26420096BE97 /* estrela120.png */,
+				D3BC2E2125AE27470096BE97 /* pipoca120.png */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -187,6 +187,33 @@
 				D353A3A825AC865C00B52320 /* AlertaSemInternet.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D3561F6825AE13D1001A1C4C /* Aplication */ = {
+			isa = PBXGroup;
+			children = (
+				D3141B2025A742900047B34D /* AppDelegate.swift */,
+				D3141B2425A742900047B34D /* Main.storyboard */,
+				D3141B2925A742910047B34D /* LaunchScreen.storyboard */,
+				D3141B2C25A742910047B34D /* Info.plist */,
+			);
+			path = Aplication;
+			sourceTree = "<group>";
+		};
+		D3BC2E2425AE49550096BE97 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D3141B2725A742910047B34D /* Assets.xcassets */,
+				D353A39F25AC114200B52320 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D3BC2E2625AE4A230096BE97 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,7 +245,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = "Aloisio Formento Junior";
 				TargetAttributes = {
 					D3141B1C25A742900047B34D = {
@@ -250,9 +277,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3141B2B25A742910047B34D /* LaunchScreen.storyboard in Resources */,
+				D3BC2E2225AE27470096BE97 /* pipoca120.png in Resources */,
 				D3141B2825A742910047B34D /* Assets.xcassets in Resources */,
 				D353A3A125AC114200B52320 /* estrela.png in Resources */,
 				D3141B2625A742900047B34D /* Main.storyboard in Resources */,
+				D3BC2E1F25AE26420096BE97 /* estrela120.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +337,6 @@
 				D3141B4225A7B3350047B34D /* filmeJSON.swift in Sources */,
 				D353A3A925AC865C00B52320 /* AlertaSemInternet.swift in Sources */,
 				D3141B3C25A775200047B34D /* FilmesViewController.swift in Sources */,
-				D3141B2325A742900047B34D /* ViewController.swift in Sources */,
 				D3141B3E25A776410047B34D /* celulaFilmeCollectionViewCell.swift in Sources */,
 				D3141B2125A742900047B34D /* AppDelegate.swift in Sources */,
 				D3141B4725A888F70047B34D /* DetalhesFilmeViewController.swift in Sources */,
@@ -364,6 +392,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -425,6 +454,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -460,7 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = provaFilmes/Info.plist;
+				INFOPLIST_FILE = provaFilmes/Aplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,7 +508,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = provaFilmes/Info.plist;
+				INFOPLIST_FILE = provaFilmes/Aplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
