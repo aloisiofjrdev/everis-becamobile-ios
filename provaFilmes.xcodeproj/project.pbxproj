@@ -21,6 +21,7 @@
 		D3561F5C25AE0C49001A1C4C /* Pods_provaFilmes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B8C02C69D7BB6AAA26CDBF /* Pods_provaFilmes.framework */; };
 		D3BC2E1F25AE26420096BE97 /* estrela120.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BC2E1E25AE26420096BE97 /* estrela120.png */; };
 		D3BC2E2225AE27470096BE97 /* pipoca120.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BC2E2125AE27470096BE97 /* pipoca120.png */; };
+		D3BC2E2F25AF2AF40096BE97 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC2E2E25AF2AF40096BE97 /* MovieService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		D353A3A825AC865C00B52320 /* AlertaSemInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertaSemInternet.swift; sourceTree = "<group>"; };
 		D3BC2E1E25AE26420096BE97 /* estrela120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estrela120.png; sourceTree = "<group>"; };
 		D3BC2E2125AE27470096BE97 /* pipoca120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipoca120.png; sourceTree = "<group>"; };
+		D3BC2E2E25AF2AF40096BE97 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		D3141B1F25A742900047B34D /* provaFilmes */ = {
 			isa = PBXGroup;
 			children = (
+				D3BC2E2825AF2A800096BE97 /* Service */,
 				D3BC2E2625AE4A230096BE97 /* ViewControllers */,
 				D3BC2E2425AE49550096BE97 /* Resources */,
 				D3561F6825AE13D1001A1C4C /* Aplication */,
@@ -214,6 +217,14 @@
 			children = (
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D3BC2E2825AF2A800096BE97 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D3BC2E2E25AF2AF40096BE97 /* MovieService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +351,7 @@
 				D3141B3E25A776410047B34D /* celulaFilmeCollectionViewCell.swift in Sources */,
 				D3141B2125A742900047B34D /* AppDelegate.swift in Sources */,
 				D3141B4725A888F70047B34D /* DetalhesFilmeViewController.swift in Sources */,
+				D3BC2E2F25AF2AF40096BE97 /* MovieService.swift in Sources */,
 				D3141B3425A7450C0047B34D /* FilmesAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

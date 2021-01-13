@@ -21,15 +21,39 @@ class FilmesViewController: UIViewController, UICollectionViewDataSource, UIColl
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.navigationBar.barStyle = .black
     }
-
+    
+    let client: MovieServiceProtocol
+    
+    init(client: MovieServiceProtocol = MovieService()) {
+        self.client = client
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func loadMovie() {
+        client.getFilmes { (filmesArray, erro) in
+            if let error = erro {
+                AlertaSemInternet().alertaSemInternet(self, "Atenção", error)
+            }else if let filmes = filmesArray{
+                self.filmes = filmes
+                self.colecaoFilmes.reloadData()
+            }
+        }
+    }
+    
 
     
     var filmes: [Filmes] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         colecaoFilmes.dataSource = self
         colecaoFilmes.delegate = self
-        getFilme()
+        loadMovie()
+//        getFilme()
         
         
         
@@ -56,21 +80,19 @@ class FilmesViewController: UIViewController, UICollectionViewDataSource, UIColl
         controller.filmeSelecionado = detalhesFilme
         navigationController?.pushViewController(controller, animated: true)
 //        self.present(controller, animated: true, completion: nil)
-    }
+    } 
     
-    func getFilme() {
-        FilmesAPI().getFilmes { (filmesArray, erro) in
-            if let error = erro {
-                AlertaSemInternet().alertaSemInternet(self, "Atenção", error)
-            }else if let filmes = filmesArray{
-                self.filmes = filmes
-                self.colecaoFilmes.reloadData()
-                
-
-            }
-        }
-        
-    }
+//    func getFilme() {
+//        FilmesAPI().getFilmes { (filmesArray, erro) in
+//            if let error = erro {
+//                AlertaSemInternet().alertaSemInternet(self, "Atenção", error)
+//            }else if let filmes = filmesArray{
+//                self.filmes = filmes
+//                self.colecaoFilmes.reloadData()
+//            }
+//        }
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let larguraCelula = collectionView.bounds.width / 2
         return CGSize(width: larguraCelula - 10, height: 160)
