@@ -30,9 +30,10 @@ class FilmesViewController: UIViewController, UICollectionViewDataSource, UIColl
         super.viewDidLoad()
         colecaoFilmes.dataSource = self
         colecaoFilmes.delegate = self
+        getFilme()
         
 //        loadMovie()
-//        getFilme()
+
         
         
         
@@ -40,16 +41,16 @@ class FilmesViewController: UIViewController, UICollectionViewDataSource, UIColl
         // Do any additional setup after loading the view.
     }
     
-    let viewModel: MainViewModel
-    
-    init(viewModel: MainViewModel = MainViewModel()) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+//    let viewModel: MainViewModel
+//    
+//    init(viewModel: MainViewModel = MainViewModel()) {
+//        self.viewModel = viewModel
+//        super.init(nibName: nil, bundle: nil)
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     
    
@@ -75,16 +76,16 @@ class FilmesViewController: UIViewController, UICollectionViewDataSource, UIColl
 //        self.present(controller, animated: true, completion: nil)
     }
     
-//    func getFilme() {
-//        FilmesAPI().getFilmes { (filmesArray, erro) in
-//            if let error = erro {
-//                AlertaSemInternet().alertaSemInternet(self, "Atenção", error)
-//            }else if let filmes = filmesArray{
-//                self.filmes = filmes
-//                self.colecaoFilmes.reloadData()
-//            }
-//        }
-//    }
+    func getFilme() {
+        FilmesAPI().getFilmes { (filmesArray, erro) in
+            if let error = erro {
+                AlertaSemInternet().alertaSemInternet(self, "Atenção", error)
+            }else if let filmes = filmesArray{
+                self.filmes = filmes
+                self.colecaoFilmes.reloadData()
+            }
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let larguraCelula = collectionView.bounds.width / 2
