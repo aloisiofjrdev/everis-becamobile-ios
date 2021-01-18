@@ -18,13 +18,13 @@ class Welcome: Codable {
     let page: Int
     let results: [Filmes]
     let totalPages, totalResults: Int
-    
+
     enum CodingKeys: String, CodingKey {
         case page, results
         case totalPages = "total_pages"
         case totalResults = "total_results"
     }
-    
+
     init(page: Int, results: [Filmes], totalPages: Int, totalResults: Int) {
         self.page = page
         self.results = results
@@ -53,7 +53,7 @@ class Filmes: Codable {
     let firstAirDate, name: String?
     let originCountry: [String]?
     let originalName: String?
-    
+
     enum CodingKeys: String, CodingKey {
         case voteAverage = "vote_average"
         case title, overview
@@ -72,7 +72,7 @@ class Filmes: Codable {
         case originCountry = "origin_country"
         case originalName = "original_name"
     }
-    
+
     init(voteAverage: Double, title: String?, overview: String, releaseDate: String?, adult: Bool?, backdropPath: String, genreIDS: [Int], voteCount: Int, originalLanguage: OriginalLanguage, originalTitle: String?, posterPath: String, id: Int, video: Bool?, popularity: Double, mediaType: MediaType, firstAirDate: String?, name: String?, originCountry: [String]?, originalName: String?) {
         self.voteAverage = voteAverage
         self.title = title
@@ -106,4 +106,31 @@ enum OriginalLanguage: String, Codable {
     case fr = "fr"
     case ja = "ja"
 }
+
+//import Foundation
+//
+//struct Result : Codable {
+//
+//    var name: String?
+//    var backdropPath: String = ""
+//    var title: String?
+//    var overview = ""
+//    var posterPath: String = ""
+//    var voteAverage: Double?
+//
+//    enum CodingKeys: String,CodingKey{
+//        case name
+//        case backdropPath = "backdrop_path"
+//        case title
+//        case overview
+//        case posterPath = "poster_path"
+//        case voteAverage = "vote_average"
+//    }
+//
+//}
+//
+//
+//struct ResultDataStore: Codable {
+//    var filmes: [Result]
+//}
 

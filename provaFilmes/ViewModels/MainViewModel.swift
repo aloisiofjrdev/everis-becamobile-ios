@@ -24,7 +24,7 @@
 //    }
 //    
 //    func loadMovie(){
-//        client.getFilmes { (filmes, erro) in
+//        client. { (filmes, erro) in
 //            if let error = erro {
 //                print(error)
 //            }else{
