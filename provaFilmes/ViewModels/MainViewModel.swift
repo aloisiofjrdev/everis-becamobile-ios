@@ -6,21 +6,30 @@
 //  Copyright © 2021 Aloisio Formento Junior. All rights reserved.
 //
 
-//class MainViewModel  {
+//import Foundation
+//import UIKit
 //
-//    var filmes: [Filmes] = []
+//protocol MainViewModelDelegate{
+//    func reloadData(filme: ResultViewData)
+//}
 //
-//
-//    func getFilme() {
-//        FilmesAPI().getFilmes { (filmesArray, erro) in
+//class MainViewModel {
+//    
+//    private let client: FilmeServiceProtocol
+//    var viewData: Bindable<ResultViewData?> = Bindable(nil)
+//    var delegate: MainViewModelDelegate?
+//    
+//    init(client: FilmeServiceProtocol = FilmeService()){
+//        self.client = client
+//    }
+//    
+//    func loadMovie(){
+//        client.getFilmes { (filmes, erro) in
 //            if let error = erro {
-//                AlertaSemInternet().alertaSemInternet(self, "Atenção", error)
-//            }else if let filmes = filmesArray{
-//                self.filmes = filmes
-//                self.colecaoFilmes.reloadData()
+//                print(error)
+//            }else{
+//                self.delegate?.reloadData(filme: ResultViewData(model: filmes))
 //            }
 //        }
 //    }
-//
-//
 //}
