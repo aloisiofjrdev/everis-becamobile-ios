@@ -17,9 +17,8 @@ class DetalhesFilmeViewController: UIViewController {
     @IBOutlet weak var raitingFilmeDetalhes: UILabel!
     @IBOutlet weak var textoFilmeDetalhes: UITextView!
     @IBOutlet weak var estrelaRatingFilmeDetalhes: UIImageView!
-    
-    var filmeSelecionado: Filmes? = nil
-    
+    var filmeSelecionado: Filmes?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         if let detalhesFilme = filmeSelecionado {
@@ -32,9 +31,7 @@ class DetalhesFilmeViewController: UIViewController {
             self.raitingFilmeDetalhes.text = (raitingString + "/10")
         }
     }
-    
     @IBAction func buttonVoltar(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
-    
 }

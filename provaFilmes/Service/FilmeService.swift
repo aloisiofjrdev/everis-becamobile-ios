@@ -6,14 +6,14 @@
 //  Copyright © 2021 Aloisio Formento Junior. All rights reserved.
 //
 
-//import Foundation
-//import Alamofire
+// import Foundation
+// import Alamofire
 //
-//protocol FilmeServiceProtocol{
+// protocol FilmeServiceProtocol{
 //    func getFilmes(completion:@escaping (_ movies:Result?, _ error:String?) -> Void )
-//}
+// }
 //
-//class FilmeService : FilmeServiceProtocol {
+// class FilmeService : FilmeServiceProtocol {
 //
 //    init() {
 //
@@ -36,5 +36,4 @@
 //            }
 //        }
 //    }
-//}
-
+// }

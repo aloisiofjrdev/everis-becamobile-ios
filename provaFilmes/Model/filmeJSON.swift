@@ -107,9 +107,9 @@ enum OriginalLanguage: String, Codable {
     case ja = "ja"
 }
 
-//import Foundation
+// import Foundation
 //
-//struct Result : Codable {
+// struct Result : Codable {
 //
 //    var name: String?
 //    var backdropPath: String = ""
@@ -127,10 +127,9 @@ enum OriginalLanguage: String, Codable {
 //        case voteAverage = "vote_average"
 //    }
 //
-//}
+// }
 //
 //
-//struct ResultDataStore: Codable {
+// struct ResultDataStore: Codable {
 //    var filmes: [Result]
-//}
-
+// }

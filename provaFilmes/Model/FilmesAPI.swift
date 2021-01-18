@@ -12,7 +12,7 @@ import CoreData
 
 class FilmesAPI: NSObject {
 
-    func getFilmes(completion:@escaping (_ movies:[Filmes]?, _ error:String?) -> Void ) {
+    func getFilmes(completion:@escaping (_ movies: [Filmes]?, _ error: String?) -> Void ) {
 
         let url = "https://api.themoviedb.org/3/trending/all/week?api_key=79b0976a6ec7bd4d968a3ef2d867985d&language=pt-BR"
 
@@ -26,11 +26,9 @@ class FilmesAPI: NSObject {
                     print(error)
                     completion(nil, error.localizedDescription)
                 }
-            }else{
+            } else {
                 completion(nil, "Data null")
             }
         }
     }
 }
-
-

@@ -6,14 +6,14 @@
 //  Copyright © 2021 Aloisio Formento Junior. All rights reserved.
 //
 
-//import Foundation
-//import UIKit
+// import Foundation
+// import UIKit
 //
-//protocol MainViewModelDelegate{
+// protocol MainViewModelDelegate{
 //    func reloadData(filme: ResultViewData)
-//}
+// }
 //
-//class MainViewModel {
+// class MainViewModel {
 //    
 //    private let client: FilmeServiceProtocol
 //    var viewData: Bindable<ResultViewData?> = Bindable(nil)
@@ -32,4 +32,4 @@
 //            }
 //        }
 //    }
-//}
+// }

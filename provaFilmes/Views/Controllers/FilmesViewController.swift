@@ -13,34 +13,23 @@ import AlamofireImage
 class FilmesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var colecaoFilmes: UICollectionView!
-    
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.navigationBar.barStyle = .black
     }
-    
-    
-    
     var filmes: [Filmes] = []
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         colecaoFilmes.dataSource = self
         colecaoFilmes.delegate = self
         getFilme()
-        
 //        loadMovie()
-
-        
-        
-        
 
         // Do any additional setup after loading the view.
     }
-    
 //    let viewModel: MainViewModel
 //    
 //    init(viewModel: MainViewModel = MainViewModel()) {
@@ -51,22 +40,16 @@ class FilmesViewController: UIViewController, UICollectionViewDataSource, UIColl
 //    required init?(coder: NSCoder) {
 //        fatalError("init(coder:) has not been implemented")
 //    }
-    
-    
-   
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return filmes.count
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let celulaFilmes = collectionView.dequeueReusableCell(withReuseIdentifier: "celulaFilme", for: indexPath) as! celulaFilmeCollectionViewCell
+        let celulaFilmes = collectionView.dequeueReusableCell(withReuseIdentifier: "celulaFilme", for: indexPath) as! CelulaFilmeCollectionViewCell
         let imageUrl = URL(string: "http://image.tmdb.org/t/p/w300\(filmes[indexPath.row].posterPath)")
         celulaFilmes.imagemFilme.af_setImage(withURL: imageUrl!)
         celulaFilmes.layer.cornerRadius = 10
         return celulaFilmes
     }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detalhesFilme = filmes[indexPath.item]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -75,18 +58,15 @@ class FilmesViewController: UIViewController, UICollectionViewDataSource, UIColl
         navigationController?.pushViewController(controller, animated: true)
 //        self.present(controller, animated: true, completion: nil)
     }
-    
     func getFilme() {
         FilmesAPI().getFilmes { (filmesArray, erro) in
             if let error = erro {
-                AlertaSemInternet().alertaSemInternet(self, "Atenção", error)
-            }else if let filmes = filmesArray{
+                AlertaSemInternet().alertaSemInternet(self, "Atenção", error)} else if let filmes = filmesArray {
                 self.filmes = filmes
                 self.colecaoFilmes.reloadData()
             }
         }
     }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let larguraCelula = collectionView.bounds.width / 2
         return CGSize(width: larguraCelula - 10, height: 160)
