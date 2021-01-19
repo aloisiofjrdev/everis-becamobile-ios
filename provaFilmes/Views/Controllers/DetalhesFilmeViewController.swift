@@ -21,6 +21,13 @@ class DetalhesFilmeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        detalhesFilmesTela()
+        setupAccessibility()
+    }
+    @IBAction func buttonVoltar(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    func detalhesFilmesTela(){
         if let detalhesFilme = filmeSelecionado {
             self.tituloFilmeDetalhes.text = detalhesFilme.title ?? detalhesFilme.name
             self.textoFilmeDetalhes.text = detalhesFilme.overview
@@ -30,8 +37,5 @@ class DetalhesFilmeViewController: UIViewController {
             let raitingString = String(describing: raiting)
             self.raitingFilmeDetalhes.text = (raitingString + "/10")
         }
-    }
-    @IBAction func buttonVoltar(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
     }
 }

@@ -11,7 +11,6 @@ import Alamofire
 import AlamofireImage
 
 class FilmesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
     @IBOutlet weak var colecaoFilmes: UICollectionView!
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -71,5 +70,4 @@ class FilmesViewController: UIViewController, UICollectionViewDataSource, UIColl
         let larguraCelula = collectionView.bounds.width / 2
         return CGSize(width: larguraCelula - 10, height: 160)
     }
-
 }

@@ -27,6 +27,7 @@
 		D3BC311525B55F4C0096BE97 /* MainViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC311425B55F4C0096BE97 /* MainViewData.swift */; };
 		D3BC311E25B5FFD90096BE97 /* provaFilmesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC311D25B5FFD90096BE97 /* provaFilmesTests.swift */; };
 		D3BC312E25B5FFE10096BE97 /* provaFilmesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC312D25B5FFE10096BE97 /* provaFilmesUITests.swift */; };
+		D3BC31DB25B714380096BE97 /* Accessiblity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC31DA25B714380096BE97 /* Accessiblity+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		D3BC312B25B5FFE10096BE97 /* provaFilmesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = provaFilmesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BC312D25B5FFE10096BE97 /* provaFilmesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = provaFilmesUITests.swift; sourceTree = "<group>"; };
 		D3BC312F25B5FFE10096BE97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3BC31DA25B714380096BE97 /* Accessiblity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Accessiblity+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 				D3141B3B25A775200047B34D /* FilmesViewController.swift */,
 				D3141B4625A888F70047B34D /* DetalhesFilmeViewController.swift */,
 				D353A3A825AC865C00B52320 /* AlertaSemInternet.swift */,
+				D3BC31DA25B714380096BE97 /* Accessiblity+.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3BC31DB25B714380096BE97 /* Accessiblity+.swift in Sources */,
 				D3141B4225A7B3350047B34D /* filmeJSON.swift in Sources */,
 				D353A3A925AC865C00B52320 /* AlertaSemInternet.swift in Sources */,
 				D3141B3C25A775200047B34D /* FilmesViewController.swift in Sources */,
