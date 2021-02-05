@@ -71,3 +71,4 @@ class FilmesViewController: UIViewController, UICollectionViewDataSource, UIColl
         return CGSize(width: larguraCelula - 10, height: 160)
     }
 }
+
